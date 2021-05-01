@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rahman - pokemon 2</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="pokechecker">
+        <h1>pokemon api</h1>
+    
+        <label for="search">Enter a Pokemon ID (1 - 802):</label>
+        <input type="number" min="0" max="802" id="search">
+    
+        <button class="getPokemon">Get Pokemon</button>
+        
+        <div class="results">
+            <div class="loading hidden">test - no data yet</div>
+    
+            <div class="success hidden">data collected</div>
+    
+            <div class="pokemon"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
