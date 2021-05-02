@@ -12,6 +12,7 @@ body {
 	transform: translate(-50%, -50%);
 	padding: 250px 50px;
 	width: auto;
+	border: 15px solid black;
 	border-radius: 50%;
 	box-shadow: 1px -1px 3px 0 #000, -1px 1px 3px 0, -1px -1px 3px 0 #000, 1px 1px 3px 0 #000;
 }
