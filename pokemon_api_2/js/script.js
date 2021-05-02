@@ -18,7 +18,7 @@ async function getPokemon() {
 		if(Response.status == 404){
 			pokeResults.style.borderRadius = "50%";
 			pokeResults.style.padding = "250px 50px";
-			alert("The Pokémon ID or name you are looking for is not found!" + "\n" +"Please ensure your entered Pokémon ID is between 1 - 898."  + "\n" + "If you are using Pokémon name, ensure it is typed correctly.");
+			alert("The Pokémon ID or name you are looking for is not found!" + "\n" +"Please ensure your entered Pokémon ID is between 1 - 898."  + "\n" + "If you are using Pokémon name, ensure it is typed in lower-case alphabets only.");
 			return
 		}
 	})
