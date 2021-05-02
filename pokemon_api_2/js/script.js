@@ -18,7 +18,7 @@ async function getPokemon() {
 		if(Response.status == 404){
 			pokeResults.style.borderRadius = "50%";
 			pokeResults.style.padding = "250px 50px";
-			alert("The Pokémon ID or name you are looking for is not found!" + "\n" +"Please ensure your entered Pokémon ID is between 1 - 802."  + "\n" + "If you are using Pokémon name, ensure it is typed correctly.");
+			alert("The Pokémon ID or name you are looking for is not found!" + "\n" +"Please ensure your entered Pokémon ID is between 1 - 898."  + "\n" + "If you are using Pokémon name, ensure it is typed correctly.");
 			return
 		}
 	})
@@ -58,11 +58,14 @@ async function getPokemon() {
 		
 		<div class="moves">
 			<div style="font-size: 30px; font-weight: bold; text-align: center;">Moves: </div>
-			<div>${pokemonMoves}
-			</div>
+			<div>${pokemonMoves}</div>
 		</div>
 	</div>`;
 	
+
+	if(`${pokemonMoves}`.length ===0){
+		alert("The latest PokéAPI version does not have this Pokémon's moves.")
+	}
 	// document.querySelector('.loading').classList.add('hidden');
 	// document.querySelector('.success').classList.remove('hidden');
 	document.querySelector('.pokemon').innerHTML = pokemonCard;
@@ -81,3 +84,6 @@ document.querySelector('.getPokemon').addEventListener('click', function (){
 		getPokemon();
 	}
 });
+
+
+
