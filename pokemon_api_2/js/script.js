@@ -26,6 +26,10 @@ async function getPokemon() {
 	let pokemonFetch = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
 	let pokemon = await pokemonFetch.json();
 	
+	const pokemonAbilities = pokemon.abilities.map(ability => {
+		return `<span>${ability.ability.name}</span>`;
+	}).join(', ');
+	
 	const pokemonTypes = pokemon.types.map(type => {
 		return `<span>${type.type.name}</span>`;
 	}).join(', ');
@@ -40,6 +44,7 @@ async function getPokemon() {
 				<img src = ${pokemon.sprites.front_default} class="pokeImg">
 			<div class="data">
 				<div class="type" style="text-transform: capitalize;"><b>Type: </b>${pokemonTypes}</div>
+				<div class="abilities" style="text-transform: capitalize;"><b>Abilities: </b>${pokemonAbilities}</div>
 				<div class="height"><b>Height: </b>${pokemon.height} cm</div>
 				<div class="weight"><b>Weight: </b>${pokemon.weight} g</div>
 			</div>
