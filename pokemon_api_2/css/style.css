@@ -24,7 +24,7 @@ h1 {
 
 a {
 	text-decoration: none;
-	position: ixed;
+	position: fixed;
 }
 
 
@@ -75,7 +75,7 @@ button.getPokemon {
 
 
 .pokemonCard {
-	width: 100%;
+	width: 1250px;
 	display: flex;
 }
 .idName+img+data+stats{
