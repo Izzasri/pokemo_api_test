@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rahman - pokemon 2</title>
+    <title>Pokémon API</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
     <div class="pokechecker">
-        <h1>pokemon api</h1>
+        <h1>
+            <a href="https://pokeapi.co/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/330px-International_Pok%C3%A9mon_logo.svg.png" alt="" height="80px" width="280px">
+            </a>
+        </h1>
     
-        <label for="search">Enter a Pokemon ID (1 - 802):</label>
-        <input type="number" min="0" max="802" id="search">
+        <div class="getID">
+            <label for="search">Enter a Pokémon ID (1 - 802) or a Pokémon name: </label>
+            <input min="0" max="802" id="search" placeholder="ID/name" oninput="consoleInput()">
+        </div>
     
-        <button class="getPokemon">Get Pokemon</button>
+        <button class="getPokemon">Get Pokémon</button>
         
         <div class="results">
             <div class="loading hidden">test - no data yet</div>
