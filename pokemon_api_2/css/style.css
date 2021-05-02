@@ -11,6 +11,7 @@ body {
 	top: 50%;
 	transform: translate(-50%, -50%);
 	padding: 100px 50px;
+	width: auto;
 	border-radius: 50%;
 	box-shadow: 1px -1px 3px 0 #000, -1px 1px 3px 0, -1px -1px 3px 0 #000, 1px 1px 3px 0 #000;
 }
@@ -22,6 +23,7 @@ h1 {
 
 a {
 	text-decoration: none;
+	position: ixed;
 }
 
 
@@ -32,49 +34,84 @@ a {
 
 label {
 	display: inline-block;
-	padding: 0.5em;
+	padding: 0.6em 0.6em 0.6em 0;
+	margin: 0;
+	flex-grow: 0.1;
 }
 
 input {
-	font-size: 16px;
+	font-size: 20px;
 	border: 2px solid black;
 	border-radius: 5px;
-	box-sizing: border-box;
-	padding: 2px 5px;
 	width: 100px;
-	min-height: 35px;
-	display: block;
-	justify-content: center;
+	display: inline-block;
+	padding: 5px;
 	margin: auto;
+	padding: none;
 	background-color: beige;
+	flex-grow: 1;
 }
 
 button.getPokemon {
-	background: whitesmoke;
-	border: black 3px solid;
+	font-size: 20px;
+	border: black 2px solid;
 	border-radius: 5px;
+	display: inline-block;
+	padding: 5px;
 	color: black;
-	font-size: 18pt;
-	padding: 5 px;
-	margin-top: 5px;
-	box-sizing: border-box;
-	width: 100%;
+	margin: auto 5px;
+	background-color: whitesmoke;
 	font-weight: bold;
 	transition: 0.2s ease-out;
+	flex-grow: 1;
 }
-
 .getPokemon:hover{
 	background-color: red;
 	color: white;
 	cursor: pointer;
 }
 
-.results {
-	padding-top: 20px;
-	clear: both;
+.pokemonCard {
+	width: 100%;
+	float: left;
+	display: flex;
+}
+.idName+Img{
+	width: 246.53px;
+}
+.pokeIdName{
+	margin: 10px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+.pokeImg{
+	height: 175px;
+}
+.data{
+	width: 246.53px;
+	float: left;
+}
+.data .type, .height, .weight{
+	margin: 10px;
+}
+.stats{
+	width: 246.53px;
+	float: left;
+	background-color: red;
 }
 
-.pokemonCard {
-	border-radius: 10px;
-	padding: 20px;
+.moves{
+	flex-wrap: wrap;
+	margin: 10px;
+	text-align: justify;
 }
+
+
+/* id+Name
+data height
+data weight
+data moves
+
+
+*/
