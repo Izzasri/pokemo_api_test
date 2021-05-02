@@ -10,7 +10,7 @@ body {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	padding: 100px 50px;
+	padding: 250px 50px;
 	width: auto;
 	border-radius: 50%;
 	box-shadow: 1px -1px 3px 0 #000, -1px 1px 3px 0, -1px -1px 3px 0 #000, 1px 1px 3px 0 #000;
@@ -59,54 +59,74 @@ button.getPokemon {
 	display: inline-block;
 	padding: 5px;
 	color: black;
-	margin: auto 5px;
+	margin: auto 10px;
 	background-color: whitesmoke;
 	font-weight: bold;
 	transition: 0.2s ease-out;
 	flex-grow: 1;
 }
-.getPokemon:hover{
+.getPokemon:hover {
 	background-color: red;
 	color: white;
 	cursor: pointer;
 }
 
+
+
 .pokemonCard {
 	width: 100%;
-	float: left;
 	display: flex;
 }
-.idName+Img{
+.idName+img+data+stats{
 	width: 246.53px;
 }
 .pokeIdName{
 	margin: 10px;
 	text-align: center;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 30px;
+	text-transform: capitalize;
 }
 .pokeImg{
 	height: 175px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 .data{
 	width: 246.53px;
 	float: left;
+	margin: 10px;
+	text-align: center;
+	background-color: rgb(255, 220, 220);
+	border: black 2px solid;
+	border-radius: 5px;
 }
-.data .type, .height, .weight{
+.type, .height, .weight{
 	margin: 10px;
 }
 .stats{
 	width: 246.53px;
 	float: left;
-	background-color: red;
-}
-
-.moves{
-	flex-wrap: wrap;
 	margin: 10px;
-	text-align: justify;
+	text-align: center;
+	background-color: rgb(255, 180, 180);
+	border: black 2px solid;
+	border-radius: 5px;
 }
-
+.statsChild{
+	margin: 10px;
+}
+.moves{
+	width: 100%;
+	margin: 10px;
+	padding: 20px;
+	text-align: justify;
+	text-justify:auto;
+	background-color: rgb(255, 240, 240);
+	border: black 2px solid;
+	border-radius: 5px;
+}
 
 /* id+Name
 data height
