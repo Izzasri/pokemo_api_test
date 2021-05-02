@@ -1,16 +1,17 @@
 var pokeResults = document.getElementsByClassName('pokechecker')[0];
-let inputStr = document.getElementById('search').value;
-let inputNum = parseInt(inputStr);
+var inputStr = document.getElementById('search').value;
+var inputNum = parseInt(inputStr);
 
 function consoleInput(){
-	console.log("You typed in: " + inputNum)
+	let inputStrConsole = document.getElementById('search').value;
+	console.log("You typed in: " + inputStrConsole)
 }
 
 async function getPokemon() {
 	const id = document.querySelector('#search').value;
 	document.querySelector('.pokemon').innerHTML = '';
-	document.querySelector('.success').classList.add('hidden');
-	document.querySelector('.loading').classList.remove('hidden');
+	// document.querySelector('.success').classList.add('hidden');
+	// document.querySelector('.loading').classList.remove('hidden');
 
 	fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`)
 	.then(function(Response){
@@ -26,20 +27,31 @@ async function getPokemon() {
 	let pokemon = await pokemonFetch.json();
 	
 	const pokemonTypes = pokemon.types.map(type => {
-		return `<li>${type.type.name}</li>`;
-	}).join('');
+		return `<span>${type.type.name}</span>`;
+	}).join(', ');
+
+	const pokemonMoves = pokemon.moves.map(move => {
+		return `<span>${move.move.name}</span>`
+	}).join(', ');
 	
 	const pokemonCard = `<div class="pokemonCard">
-		<div class="id+Name">#${pokemon.id} ${pokemon.name}</div>
+		<div class="idName+img">
+			<div class="pokeIdName">#${pokemon.id} ${pokemon.name}</div>
+			<img src = ${pokemon.sprites.front_default} class="pokeImg">
+		</div>
+		<div class="data">
+			<div class="type"><b>Type: </b>${pokemonTypes}</div>
+			<div class="height"><b>Height: </b>${pokemon.height} cm</div>
+			<div class="weight"><b>Weight: </b>${pokemon.weight} g</div>
+		</div>
+		<div class="stats">
 
-		<img src = ${pokemon.sprites.front_default}>
-		<div class="type">Types: <ul>${pokemonTypes}</ul></div>
-		<div class="type">Height: <ul>${pokemon.height}</ul></div>
-		<div class="type">Weight: <ul>${pokemon.weight}</ul></div>
+		</div>
+		<div class="moves""><b>Moves: </b><br>${pokemonMoves}</div>
 	</div>`;
 	
-	document.querySelector('.loading').classList.add('hidden');
-	document.querySelector('.success').classList.remove('hidden');
+	// document.querySelector('.loading').classList.add('hidden');
+	// document.querySelector('.success').classList.remove('hidden');
 	document.querySelector('.pokemon').innerHTML = pokemonCard;
 
 	pokeResults.style.borderRadius = "20px";

@@ -9,23 +9,21 @@
 </head>
 <body>
     <div class="pokechecker">
-        <h1>
-            <a href="https://pokeapi.co/">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/330px-International_Pok%C3%A9mon_logo.svg.png" alt="" height="80px" width="280px">
-            </a>
-        </h1>
+        <h1><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/330px-International_Pok%C3%A9mon_logo.svg.png" alt="" height="80px" width="280px"><a href="https://pokeapi.co/"><img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="" height="30px" width="80px"></a></h1>
+        
     
         <div class="getID">
             <label for="search">Enter a Pokémon ID (1 - 802) or a Pokémon name: </label>
-            <input min="0" max="802" id="search" placeholder="ID/name" oninput="consoleInput()">
+            <input min="0" max="802" id="search" placeholder="ID/Name" oninput="consoleInput()">
+            <button class="getPokemon">Get Pokémon</button>
         </div>
     
-        <button class="getPokemon">Get Pokémon</button>
+        
         
         <div class="results">
-            <div class="loading hidden">test - no data yet</div>
+            <!-- <div class="loading hidden">test - no data yet</div>
     
-            <div class="success hidden">data collected</div>
+            <div class="success hidden">data collected</div> -->
     
             <div class="pokemon"></div>
         </div>
